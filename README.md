@@ -418,7 +418,7 @@ At this point, this should be the entirety of the `submit.yml.erb` and `form.yml
 They're given here in full if you want to copy/paste them. And remember to [save your spot](#save-your-spot)!
 
 ```yaml
-# script.yml.erb
+# submit.yml.erb
 ---
 script:
   queue_name: "<%= custom_queue %>"
@@ -496,13 +496,13 @@ module list
 # ...
 
 # and remove the last parameter given to jupyter on line 31
-jupyter <%= context.jupyterlab_switch == "1" ? "lab" : "notebook" %> --config="${CONFIG_FILE}" <%= context.extra_jupyter_args %>
+jupyter lab --config="${CONFIG_FILE}" <%= context.extra_jupyter_args %>
 ```
 
 Now it should look like this:
 
 ```shell
-jupyter <%= context.jupyterlab_switch == "1" ? "lab" : "notebook" %> --config="${CONFIG_FILE}"
+jupyter lab --config="${CONFIG_FILE}"
 ```
 
 At this point, this should be the entirety of the `template/script.sh.erb` and `form.yml` (without comments).
@@ -694,6 +694,8 @@ field when the debug option is chosen.
 
 ## Getting User Information
 
+Well, that was a bit of a bonus tutorial, take a five minute break. :-)
+
 User information is stored in a number of places, i.e. ColdFront, Slurm DB, Lustre/Vast/NFS/etc
 storage locations. Each of these are generally query-able, and this information can be added into
 OOD for making the user's interactions simpler, streamlining the submission and cluster 
@@ -770,9 +772,11 @@ And we'll need to enable this in submit.yml.erb as well:
 script:
   native:
     <% if !custom_account.blank? %>
-    - "-A"                                                                                                - "<%= custom_account %>"                                                                             <% end %>  
+    - "-A"
+    - "<%= custom_account %>"
+    <% end %>
 ```
-and P.S. we should update that debug partition clause in form.ymml.erb as well:
+and P.S. we should update that debug partition clause in form.yml.erb as well:
 
 ```shell
 # /home/hpcadmin/ondemand/dev/apps/jupyter/form.yml.erb
@@ -853,7 +857,7 @@ We should also update the submit.yml.erb, just to make sure our submissions are 
 ```shell
 # /home/hpcadmin/ondemand/dev/apps/jupyter/submit.yml.erb
 
-    - "-partition"
+    - "--partition"
     - "<%= custom_partition %>" 
 ```
 
