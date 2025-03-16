@@ -4,12 +4,12 @@
 
 Live tutorial steps as created for the Global OOD Conference 2025
 
-- [Base OOD Tutorial](../ondemand)
+- [Base OOD Tutorial](ubccr/hpc-toolset-tutorial/ondemand)
 - [Getting User Information](#getting-user-info)
 - [Canceling Jobs](#canceling-jobs)
 
 This tutorial will be using the the `hpcadmin` credentials listed in
-[Accessing the Applications](../docs/applications.md).
+[Accessing the Applications](ubccr/hpc-toolset-tutorial/docs/applications.md).
 
 ## External links
 
