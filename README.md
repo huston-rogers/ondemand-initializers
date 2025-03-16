@@ -694,7 +694,6 @@ field when the debug option is chosen.
 
 </details>
 
-<a name="getting-user-info"></a>
 ## Getting User Information
 
 Well, that was a bit of a bonus tutorial, take a five minute break. :-)
@@ -801,6 +800,7 @@ cancel_session_enabled: 'true'
 
 And now we can cancel jobs without removing the session cards. 
 
+<a name="getting-cluster-info"></a>
 ## Getting Cluster or System Info
 
 User accounts aren't the only thing we can pull into OOD via initializers. Imagine a scenario where your site has acquired new hardware for a pre-existing cluster. This hardware will likely be defined differently in slurm, so that it's identifiable to both the sysadmin and the user. The most common way of doing this is by creating a new partition for the new hardware.
