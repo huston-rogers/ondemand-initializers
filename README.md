@@ -694,6 +694,7 @@ field when the debug option is chosen.
 
 </details>
 
+<a name="getting-user-info"></a>
 ## Getting User Information
 
 Well, that was a bit of a bonus tutorial, take a five minute break. :-)
