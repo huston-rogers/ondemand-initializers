@@ -9,6 +9,7 @@ Live tutorial steps as created for the Global OOD Conference 2025
 - [Getting User Information](#getting-user-info)
 - [Canceling Jobs](#canceling-jobs)
 - [Getting Cluster/System Information](#getting-cluster-info)
+- [There's More?](#initializers-more)
 
 This tutorial will be using the the `hpcadmin` credentials listed in
 [Accessing the Applications](../../../../ubccr/hpc-toolset-tutorial/tree/master/docs/applications.md)
@@ -882,3 +883,10 @@ I'd recommend copying the sitewide to the dev dashboard before getting too crazy
 ```shell
 cp  /etc/ood/config/apps/dashboard/initializers/init.rb  /home/hpcadmin/ondemand/dev/dashboard/config/initializers/init.rb
 ```
+
+## There's More?
+
+Yep, we'll take a minute to review the [initializers example](initializers-example.rb), which has a couple other changes. Namely
+
+* A dynamic call that gets both user accounts AND applicable QOS's (ask SchedMD about using QOS's)
+* A method for checking if a filesystem is accessible to an end user, which is great for unique datasets
