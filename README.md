@@ -4,7 +4,7 @@
 
 Live tutorial steps as created for the Global OOD Conference 2025
 
-- [Base OOD Tutorial](../../ubccr/hpc-toolset-tutorial/ondemand)
+- [Base OOD Tutorial](../../../ubccr/hpc-toolset-tutorial/ondemand)
 - [Getting User Information](#getting-user-info)
 - [Canceling Jobs](#canceling-jobs)
 
