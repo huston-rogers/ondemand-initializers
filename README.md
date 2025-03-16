@@ -8,7 +8,7 @@ Live tutorial steps as created for the Global OOD Conference 2025
 - [Fixing the Jupyter App](#fixing-jupyter)
 - [Getting User Information](#getting-user-info)
 - [Canceling Jobs](#canceling-jobs)
-- [Getting Cluster/System Information](#getting-cluster-info)
+- [Getting Cluster or System Information](#getting-cluster-info)
 - [There's More?](#initializers-more)
 
 This tutorial will be using the the `hpcadmin` credentials listed in
@@ -883,7 +883,7 @@ I'd recommend copying the sitewide to the dev dashboard before getting too crazy
 ```shell
 cp  /etc/ood/config/apps/dashboard/initializers/init.rb  /home/hpcadmin/ondemand/dev/dashboard/config/initializers/init.rb
 ```
-
+<a name="initializers-more"></a>
 ## There's More?
 
 Yep, we'll take a minute to review the [initializers example](initializers-example.rb), which has a couple other changes. Namely
