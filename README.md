@@ -5,9 +5,10 @@
 Live tutorial steps as created for the Global OOD Conference 2025
 
 - [Base OOD Tutorial](../../../../ubccr/hpc-toolset-tutorial/tree/master/ondemand)
-= [Fixing the Jupyter App](#fixing-jupyter)
+- [Fixing the Jupyter App](#fixing-jupyter)
 - [Getting User Information](#getting-user-info)
 - [Canceling Jobs](#canceling-jobs)
+- [Getting Cluster/System Information](#getting-cluster-info)
 
 This tutorial will be using the the `hpcadmin` credentials listed in
 [Accessing the Applications](../../../../ubccr/hpc-toolset-tutorial/tree/master/docs/applications.md)
@@ -798,7 +799,7 @@ cancel_session_enabled: 'true'
 
 And now we can cancel jobs without removing the session cards. 
 
-## More Initializer Functions
+## Getting Cluster or System Info
 
 User accounts aren't the only thing we can pull into OOD via initializers. Imagine a scenario where your site has acquired new hardware for a pre-existing cluster. This hardware will likely be defined differently in slurm, so that it's identifiable to both the sysadmin and the user. The most common way of doing this is by creating a new partition for the new hardware.
 
